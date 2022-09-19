@@ -20,15 +20,8 @@ class MainActivity : AppCompatActivity() {
             val name = findViewById<EditText>(R.id.itemName);
             val price = findViewById<EditText>(R.id.itemPrice);
             val link = findViewById<EditText>(R.id.itemLink);
-            //val itemname = name.text.toString()
-            //val itemprice = price.text.toString().toDouble()
-            //val itemlink = link.text.toString()
             listofItems.add(WishList(name.toString(),price.toString().toDouble(), link.toString() ) )
             wish_list_adapter.notifyDataSetChanged();
-            recyclerView.smoothScrollToPosition(wish_list_adapter.itemCount-1)
-            //etLink.setText("")
-            //etPrice.setText("")
-            //etName.setText("")
         }
     }
 }
